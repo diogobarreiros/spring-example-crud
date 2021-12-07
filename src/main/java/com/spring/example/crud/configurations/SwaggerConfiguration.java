@@ -13,7 +13,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 import java.util.List;
 
-import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static springfox.documentation.builders.PathSelectors.any;
 import static springfox.documentation.builders.RequestHandlerSelectors.basePackage;
@@ -81,12 +80,12 @@ public class SwaggerConfiguration {
     private ApiInfo apiInfo() {
         return new ApiInfo(
             build.getName(),
-            "Exemplo de api simples com Spring Boot",
+            "Example project for Spring Boot",
             build.getVersion(),
-            "https://github.com/Throyer",
-            new Contact("Throyer", "https://github.com/Throyer", "throyer.dev@gmail.com"),
+            "https://github.com/diogobarreiros",
+            new Contact("Diogo Barreiros", "https://github.com/diogobarreiros", "diogo.noroes@gmail.com"),
             "GNU General Public License v3.0",
-            "https://github.com/Throyer/springboot-api-crud/blob/master/LICENSE",
+            "https://github.com/diogobarreiros/spring-example-crud",
             emptyList()
         );
     }

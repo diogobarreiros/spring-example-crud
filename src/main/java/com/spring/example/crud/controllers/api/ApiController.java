@@ -13,6 +13,6 @@ public class ApiController {
 
     @GetMapping
     public String index() {
-        return "Is a live!";
+        return "API online!";
     }
 }

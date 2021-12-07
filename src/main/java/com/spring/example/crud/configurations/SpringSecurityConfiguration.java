@@ -22,6 +22,7 @@ import org.springframework.stereotype.Component;
 import static com.spring.example.crud.errors.ValidationHandlers.forbidden;
 import static com.spring.example.crud.utils.Constants.SECURITY.*;
 import static org.springframework.http.HttpMethod.GET;
+import static org.springframework.http.HttpMethod.POST;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
 @Component
@@ -60,6 +61,8 @@ public class SpringSecurityConfiguration {
                 .antMatcher("/api/**")
                     .authorizeRequests()
                         .antMatchers(GET, "/api")
+                            .permitAll()
+                        .antMatchers(POST, "/api/sessions/**")
                             .permitAll()
                         .anyRequest()
                             .authenticated()
