@@ -126,6 +126,7 @@ public class User extends Auditable implements Serializable, HasEmail {
     public void merge(UpdateUser dto) {
         setName(dto.getName());
         setEmail(dto.getEmail());
+        setRoles(dto.getRoles());
     }
 
     public void updatePassword(String newPassword) {
